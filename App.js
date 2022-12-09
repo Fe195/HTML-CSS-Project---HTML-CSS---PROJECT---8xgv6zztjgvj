@@ -17,4 +17,3 @@ codes.forEach((code, index) => {
     });
 });
 
-

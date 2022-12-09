@@ -1,21 +1,20 @@
-const input0 = document.querySelector("#zero");
-const input1 = document.querySelector("#one");
-const input2 = document.querySelector("#two");
-const input3 = document.querySelector("#three");
-const input4 = document.querySelector("#four");
-const input5 = document.querySelector("#five");
+const codes = document.querySelectorAll('code');
 
-const inputs = [input0, input1, input2, input3, input4, input5];
+codes[0].focus();
 
-const moveFocusToNextInput = (eventOriginationInputNumber) => {
-  if (eventOriginationInputNumber === 5) {
-    return;
-  }
+codes.forEach((code, index) => {
 
-  inputs[eventOriginationInputNumber + 1].focus();
-};
+    code.addEventListener('keydown', (e) => {
+        if (e.key >= 0 && e.key <= 9) {
+            codes[index].value = '';
+            setTimeout(() => codes[index + 1].focus(), 10);
 
-const moveFocusToPreviousInput = (eventOriginationInputNumber) => {
-  if (eventOriginationInputNumber === 0) {
-    return;
-  }
+        } else if (e.key === 'Backspace') {
+            setTimeout(() => codes[index - 1].focus(), 10);
+
+        }
+
+    });
+});
+
+

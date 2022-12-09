@@ -16,4 +16,3 @@ codes.forEach((code, index) => {
 
     });
 });
-

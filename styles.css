@@ -1,77 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-* {
-  box-sizing: border-box;
+body, html {
+    margin: 0;
+    padding: 0;
 }
+.screen-wrapper {
+    width: 100vw;
+    height: 100vh;
 
-body {
-  background-color: hsla(64, 81%, 90%, 0.952);
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.phone {
-  position: relative;
-  overflow: hidden;
-  border: 3px inset black;
-  border-radius: 15px;
-  height: 600px;
-  width: 340px;
+.otp-container {
+    width: 600px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
 }
-
-.phone .content {
-  opacity: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100% - 60px);
-  width: 100%;
-  transition: opacity 0.4s ease;
+.otp-input {
+    width: 64px;
+    height: 100px;
+    font-size: 80px;
+    text-align: center;
+    margin: 0 4px;
 }
-
-.phone .content.show {
-  opacity: 1;
+.otp-input:focus {
+    outline: none;
+    border: 1px solid #9db8f5;
 }
-
-nav {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-top: -5px;
-  width: 100%;
+.otp-input:not(:placeholder-shown)
+{
+    box-shadow: 0 1px 1px 0 #9db8f5;
 }
-
-nav ul {
-  background-color: #c3d0f6;
-  border-top: 3px solid black;
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  height: 60px;
-}
-
-nav li {
-  color: black;
-  cursor: pointer;
-  flex: 1;
-  padding: 10px;
-  text-align: center;
-}
-
-nav ul li p {
-  font-size: 12px;
-  margin: 2px 0;
-}
-
-nav ul li:hover{
-  color: #cb7d7d;
-}
-nav ul li.active {
-  color: white;
+.foot-note {
+    background-color: #eeeeee;
+    color: #999;
+    width: 400px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 8px;
 }
